@@ -30,6 +30,7 @@ body {
     text-align: center;
     opacity: 1;
     transition: 1s opacity;
+    overflow-y: scroll;
 }
 
 .bioBody.fade-out {
@@ -521,12 +522,20 @@ body {
 /* Let's style the wrapper in such away that, 
 it should always be at the center of the browser */
 
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
 .wrapper {
     width: auto;
     display: inline-block;
     height: 100%;
     text-align: center;
-    margin-top: 4em;
 }
 
 /* Style the Un-order list by setting its list-style to none */
@@ -545,6 +554,7 @@ it should always be at the center of the browser */
     height: 75px;
     line-height: 75px;
     margin: 0 10px;
+    margin-bottom: 20px;
     text-align: center;
     cursor: pointer;
     border-radius: 50%;
@@ -612,25 +622,22 @@ to align it properly */
 
 @media screen and (max-width: 640px) {
     .wrapper {
-        width: 150px;
+        width: auto;
+        display: inline-block;
     }
     .wrapper ul li {
         margin-top: 2px;
-    }
-    .wrapper ul li.google {
-        margin-left: 60px;
+        margin: 0 2px;
     }
 }
 
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 319px) {
     .wrapper {
-        width: 150px;
+        width: auto;
+        display: inline-block;
     }
-    .wrapper ul li {
-        margin: 15px;
-    }
-    .wrapper ul li.google {
-        margin-left: 15px;
+    .wrapper ul li { 
+         margin: 20px;
     }
 }
