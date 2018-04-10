@@ -439,9 +439,53 @@ body {
     overflow-y: scroll;
 }
 
-.porfolioBody.fade-out {
+.portfolioBody.fade-out {
     opacity: 0;
     transition: none;
+}
+
+.portfolioHeader {
+    display: inline-block;
+    margin: auto;
+    line-height: 1em;
+    font-weight: 400;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.portfolioBody .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.project1 {
+    background-color: #b8c0c7;
+    height: 250px;
+}
+
+.project1 img {
+    padding-top: 12.5px;
+}
+
+.project2 {
+    background-color: #e2e6e9;
+    height: 250px;
+}
+
+.project2 img {
+    padding-top: 12.5px;
+}
+
+.project3 {
+    background-color: #9ba7b0;
+    height: 250px;
+}
+
+.project3 img {
+    padding-top: 12.5px;
 }
 
 /*------------------------Contact----------------------*/
@@ -660,28 +704,7 @@ to align it properly */
         width: auto;
         display: inline-block;
     }
-    .wrapper ul li { 
-         margin: 20px;
+    .wrapper ul li {
+        margin: 20px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
