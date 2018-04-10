@@ -18,8 +18,10 @@
 </head>
 
 <header>
-    <div class="menu-cont" id="toggle">
-        <span class='menu-txt' data-text='CLOSE-'>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="menu-cont" id="toggle">
+                <span class='menu-txt' data-text='CLOSE-'>
         <div class="container" onclick="myFunction(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -32,6 +34,8 @@
             }
         </script>
     </span>
+            </div>
+        </div>
     </div>
 </header>
 <div class="overlay" id="overlay">
@@ -45,8 +49,18 @@
     </nav>
 </div>
 
-<body>
+<body class="portfolioBody">
+    <script>
+        document.body.className += ' fade-out';
+    </script>
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="portfolioHeader">Portfolio</h1>
+            </div>
+        </div>
 
+    </div>
 
 
 

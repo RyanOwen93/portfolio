@@ -1,4 +1,4 @@
-/*--------------------Hero Section --------------------*/
+/*--------------------Defaults --------------------*/
 
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
@@ -11,46 +11,6 @@ body {
     overflow-y: hidden;
 }
 
-.bioBody {
-    margin: auto 0;
-    background-color: #fff;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    opacity: 1;
-    transition: 1s opacity;
-    overflow-y: scroll;
-}
-
-.contactBody {
-    margin: auto 0;
-    background-color: lightslategrey;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    opacity: 1;
-    transition: 1s opacity;
-    overflow-y: scroll;
-}
-
-.bioBody.fade-out {
-    opacity: 0;
-    transition: none;
-}
-
-.contactBody.fade-out {
-    opacity: 0;
-    transition: none;
-}
-
-.homeBody {
-    margin: auto 0;
-    background: url("https://res.cloudinary.com/dnhwxgf8i/image/upload/c_scale,h_718,q_100/v1487689941/kamil-lehmann-379_lz8idf.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-}
-
 .transparent {
     background: rgba(11, 31, 65, 0.5);
     position: absolute;
@@ -60,6 +20,8 @@ body {
     width: 100%;
     margin: 0;
 }
+
+/*--Menu Overlay--*/
 
 .menu-cont {
     position: fixed;
@@ -247,6 +209,46 @@ body {
     }
 }
 
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/*------------------------Home---------------------*/
+
+.homeBody {
+    margin: auto 0;
+    background: url("https://res.cloudinary.com/dnhwxgf8i/image/upload/c_scale,h_718,q_100/v1487689941/kamil-lehmann-379_lz8idf.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
 .ml12 {
     font-weight: 400;
     font-size: 2.8em;
@@ -283,6 +285,24 @@ body {
     .ml13 {
         font-size: 15px;
     }
+}
+
+/*------------------------Bio----------------------*/
+
+.bioBody {
+    margin: auto 0;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    opacity: 1;
+    transition: 1s opacity;
+    overflow-y: scroll;
+}
+
+.bioBody.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 .meWales {
@@ -384,6 +404,64 @@ body {
     }
 }
 
+.bioRow {
+    margin: auto;
+    padding: 10px;
+    height: 40px;
+}
+
+.css-typing {
+    margin-top: 20px;
+    opacity: 0;
+    -webkit-animation: fadein 2s;
+    animation: fadein 2s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.css-typing p {
+    font-family: "Consolas";
+    font-size: 16px;
+    line-height: 50px;
+}
+
+/*------------------------Portfolio----------------------*/
+
+.portfolioBody {
+    margin: auto 0;
+    background-color: #dfe3e6;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    opacity: 1;
+    transition: 1s opacity;
+    overflow-y: scroll;
+}
+
+.porfolioBody.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/*------------------------Contact----------------------*/
+
+.contactBody {
+    margin: auto 0;
+    background-color: lightslategrey;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    opacity: 1;
+    transition: 1s opacity;
+    overflow-y: scroll;
+}
+
+.contactBody.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
 .contactHeader {
     display: inline-block;
     margin: auto;
@@ -419,34 +497,12 @@ body {
     }
 }
 
-.row {
-    margin: auto;
-    padding: 10px;
-    height: 40px;
-}
-
 .row2 {
     margin: auto;
 }
 
 .icons {
     margin-bottom: 20px;
-}
-
-.css-typing {
-    margin-top: 20px;
-    opacity: 0;
-    -webkit-animation: fadein 2s;
-    animation: fadein 2s;
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
-}
-
-.css-typing p {
-    font-family: "Consolas";
-    font-size: 16px;
-    line-height: 50px;
 }
 
 .fa-graduation-cap {}
@@ -480,40 +536,7 @@ body {
     }
 }
 
-
-/*--------------------Menu Bar--------------------*/
-
-.container {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-
-/* -------------------- Social Icons ---------------------*/
+/* -- Social Icons ---*/
 
 body {
     background: #0A122A;
@@ -641,3 +664,24 @@ to align it properly */
          margin: 20px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
