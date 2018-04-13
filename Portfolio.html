@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en"> 
-    
-    <head>
+<html lang="en">
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -53,6 +53,7 @@
 <body class="portfolioBody">
     <script>
         document.body.className += ' fade-out';
+
     </script>
 
     <div class="row">
@@ -64,7 +65,7 @@
         <div class="project1">
             <div class="row">
                 <div class="col-sm-5">
-                    <img src="Assets/SkateWebsite.jpg" width="250px" height="235px;">
+                    <img id="skateWebsite" src="Assets/SkateWebsite.jpg" width="250px" height="235px;">
                 </div>
                 <div class="col-sm-7">
                     <h4> Bootstrap Website</h4>
@@ -76,17 +77,17 @@
             <div class="row">
                 <div class="col-sm-7">
                     <h4> Sass Website</h4>
-                    <p> lorem ipsum</p> 
+                    <p> lorem ipsum</p>
                 </div>
                 <div class="col-sm-5">
-                    <img src="Assets/SassWebsite.jpg" width="250px" height="235px">
+                    <img id="sassWebsite" src="Assets/SassWebsite.jpg" width="250px" height="235px">
                 </div>
             </div>
         </div>
         <div class="project3">
             <div class="row">
                 <div class="col-sm-5">
-                    <img src="Assets/Portal.jpg" width="250px" height="235px">
+                    <img id="loginPortal" src="Assets/Portal.jpg" width="250px" height="235px">
                 </div>
                 <div class="col-sm-7">
                     <h4> Login Portal</h4>
@@ -96,6 +97,33 @@
         </div>
     </div>
 
+    <!-- Modals -->
+
+    <!-- skate Modal -->
+    <div id="skateModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+    
+    <!-- sass Modal -->
+    <div id="sassModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img02">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
 
 
 
