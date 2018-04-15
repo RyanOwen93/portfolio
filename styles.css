@@ -430,7 +430,7 @@ body {
 
 .portfolioBody {
     margin: auto 0;
-    background-color: #dfe3e6;
+    background-color: #f0f2f4;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -462,8 +462,7 @@ body {
 }
 
 .project1 {
-    background-color: #b8c0c7;
-    height: 250px;
+    padding-bottom: 20px;
 }
 
 .project1 img {
@@ -471,8 +470,7 @@ body {
 }
 
 .project2 {
-    background-color: #e2e6e9;
-    height: 250px;
+    padding-bottom: 20px;
 }
 
 .project2 img {
@@ -480,19 +478,32 @@ body {
 }
 
 .project3 {
-    background-color: #9ba7b0;
-    height: 250px;
+    padding-bottom: 50px;
 }
 
 .project3 img {
     padding-top: 12.5px;
 }
 
+.projects h4 {
+    padding-top: 55px;
+}
+
+hr {
+    width: 80%;
+}
+
+.projects button {
+    background: transparent;
+    border-radius: 5px;
+    border-color: blue;
+}
+
 /*--------Modals ----------*/
 
 /* Style the Image Used to Trigger the Modal */
 #skateWebsite, #sassWebsite {
-    border-radius: 5px;
+    border-radius: 3%;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -503,7 +514,7 @@ body {
 
 /* The Modal (background) */
 
-.modal {
+.skatemodal, .sassmodal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -518,7 +529,7 @@ body {
 }
 
 /* Modal Content (Image) */
-.modal-content {
+.skate-modal-content, .sass-modal-content {
     margin: auto;
     display: block;
     width: 80%;
@@ -526,7 +537,7 @@ body {
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
+#skatecaption, #sasscaption {
     margin: auto;
     display: block;
     width: 80%;
@@ -538,7 +549,12 @@ body {
 }
 
 /* Add Animation - Zoom in the Modal */
-.modal-content, #caption { 
+.skate-modal-content, #skatecaption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.sass-modal-content, #sasscaption { 
     animation-name: zoom;
     animation-duration: 0.6s;
 }
@@ -549,7 +565,7 @@ body {
 }
 
 /* The Close Button */
-.close {
+.skateclose, sassclose {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -559,8 +575,15 @@ body {
     transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.skateclose:hover,
+.skateclose:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sassclose:hover,
+.sassclose:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
@@ -568,11 +591,12 @@ body {
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-    .modal-content {
+    .skate-modal-content, sass-modal-content {
         width: 100%;
     }
 }
-    
+
+
 /*------------------------Contact----------------------*/
 
 .contactBody {
