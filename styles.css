@@ -2,6 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Bitter|Philosopher');
 
 html,
 body {
@@ -487,49 +488,89 @@ body {
 
 .projects h4 {
     padding-top: 55px;
+    font-family: 'Bitter', serif;
+}
+
+.projects p {
+    font-family: 'Philosopher', sans-serif; 
 }
 
 hr {
-    width: 80%;
+    width: 70%;
+    border-color: yellow;
 }
 
-.projects button {
-    background: transparent;
-    border-radius: 5px;
-    border-color: blue;
+/* Github Button */
+
+.btn6,
+.btn6:link,
+.btn6:visited {
+    padding: 13px 8px;
+    border: 2px solid #f48042;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 3px;
+    transition: all .2s ease-in-out;
+    border-radius: 30px;
+}
+
+.btn6:hover,
+.btn6:link:hover,
+.btn6:visited:hover {
+    background: #333;
+    border: 1px solid #333;
+    color: #fefefe;
+    border-radius: 30px;
 }
 
 /*--------Modals ----------*/
 
 /* Style the Image Used to Trigger the Modal */
-#skateWebsite, #sassWebsite {
+
+#skateWebsite,
+#sassWebsite {
     border-radius: 3%;
     cursor: pointer;
     transition: 0.3s;
 }
 
-#skateWebsite:hover, #sassWebsite:hover {
+#skateWebsite:hover,
+#sassWebsite:hover {
     opacity: 0.7;
 }
 
 /* The Modal (background) */
 
-.skatemodal, .sassmodal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 25px; /* Location of the box */
+.skatemodal,
+.sassmodal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 25px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
 }
 
 /* Modal Content (Image) */
-.skate-modal-content, .sass-modal-content {
+
+.skate-modal-content,
+.sass-modal-content {
     margin: auto;
     display: block;
     width: 80%;
@@ -537,7 +578,9 @@ hr {
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
-#skatecaption, #sasscaption {
+
+#skatecaption,
+#sasscaption {
     margin: auto;
     display: block;
     width: 80%;
@@ -549,23 +592,32 @@ hr {
 }
 
 /* Add Animation - Zoom in the Modal */
-.skate-modal-content, #skatecaption { 
+
+.skate-modal-content,
+#skatecaption {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
 
-.sass-modal-content, #sasscaption { 
+.sass-modal-content,
+#sasscaption {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
 
 @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
 }
 
 /* The Close Button */
-.skateclose, sassclose {
+
+.skateclose,
+sassclose {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -590,11 +642,14 @@ hr {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .skate-modal-content, sass-modal-content {
+
+@media only screen and (max-width: 700px) {
+    .skate-modal-content,
+    sass-modal-content {
         width: 100%;
     }
 }
+
 
 
 /*------------------------Contact----------------------*/
