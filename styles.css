@@ -645,7 +645,7 @@ hr {
 /* The Close Button */
 
 .skateclose,
-sassclose {
+.sassclose {
     position: absolute;
     top: 15px;
     right: 35px;
