@@ -123,3 +123,27 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
+/*----------------- login Website Modal ------------------*/
+
+// Get the modal
+var modal = document.getElementById('loginModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('loginWebsite');
+var modalImg = document.getElementById("img03");
+var captionText = document.getElementById("logincaption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("loginclose")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+
