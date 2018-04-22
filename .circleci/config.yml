@@ -1,38 +1,23 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+      - image: circleci/node:9.4.0
     steps:
-      - checkout
+      # Install python dev and pip
+      - run: sudo apt install python-pip python-dev
 
-      # Download and cache dependencies
+      - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: yarn install
-
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies
       - save_cache:
+          key: v2-dependencies-{{ checksum "package.json" }}
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
-      - run: yarn test
-
+      - run: echo "This section is intentionally skipped."
+      - deploy:
+          name: Deploy Branches
+          command: |
+            echo "hello"
