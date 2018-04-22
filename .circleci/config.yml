@@ -13,4 +13,4 @@ jobs:
       - deploy:
           name: Deploy Branches
           command: |
-            aws --region eu-west-1 s3 ls
+            aws --region eu-west-1 s3 sync . s3://ryanowen-portfolio
