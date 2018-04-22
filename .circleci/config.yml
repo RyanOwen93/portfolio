@@ -13,4 +13,4 @@ jobs:
       - deploy:
           name: Deploy Branches
           command: |
-            aws --region eu-west-1 ec2 describe-instances
+            aws --region eu-west-1 s3 ls
