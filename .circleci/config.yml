@@ -8,14 +8,6 @@ jobs:
       - run: sudo apt install python-pip python-dev
 
       - checkout
-      - restore_cache:
-          keys:
-            - v2-dependencies-{{ checksum "package.json" }}
-            - v2-dependencies
-      - save_cache:
-          key: v2-dependencies-{{ checksum "package.json" }}
-          paths:
-            - node_modules
       - run: echo "This section is intentionally skipped."
       - deploy:
           name: Deploy Branches
