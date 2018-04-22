@@ -13,4 +13,6 @@ jobs:
       - deploy:
           name: Deploy Branches
           command: |
-            aws --region eu-west-1 s3 sync . s3://ryanowen-portfolio
+               if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                   aws --region eu-west-1 s3 sync . s3://ryanowen-portfolio
+               fi
