@@ -16,7 +16,7 @@ body {
 /*--Menu Overlay--*/
 
 .menu-cont {
-    position: fixed;
+    position: relative;
     float: left;
     top: 4%;
     display: block;
@@ -24,6 +24,8 @@ body {
     padding: 4px;
     cursor: pointer;
     z-index: 200;
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 .menu-txt {
@@ -247,7 +249,11 @@ body {
     font-size: 2.8em;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-    margin-top: 200px;
+    transform: translate(-50%, -50%);
+    top: 44%;
+    left: 50%;
+    position: absolute;
+    white-space: nowrap;
 }
 
 .ml12 .letter {
@@ -264,10 +270,14 @@ body {
 
 .ml13 {
     font-weight: 400;
-    font-size: 2.8em;
+    font-size: 2.6em;
     text-transform: uppercase;
     letter-spacing: 0.5em;
-    margin-top: 20px;
+    transform: translate(-50%, -50%);
+    top: 56%;
+    left: 50%;
+    position: absolute;
+    white-space: nowrap;
 }
 
 .ml13 .letter {
@@ -278,7 +288,7 @@ body {
 
 @media only screen and (max-width: 650px) {
     .ml13 {
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
@@ -292,6 +302,7 @@ body {
     margin: 0;
     z-index: -1;
 }
+
 /*------------------------Bio----------------------*/
 
 .bioBody {
@@ -426,492 +437,484 @@ body {
     animation-fill-mode: forwards;
 }
 
-.css-typing p {
-    font-family: "Consolas";
-    font-size: 16px;
-    line-height: 50px;
-}
-
-/*------------------------Portfolio----------------------*/
-
-.portfolioBody {
-    margin: auto 0;
-    background-color: #f7f9fb;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    opacity: 1;
-    transition: 1s opacity;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.portfolioBody.fade-out {
-    opacity: 0;
-    transition: none;
-}
-
-.portfolioHeader {
-    display: inline-block;
-    margin: auto;
-    line-height: 1em;
-    font-weight: 400;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    margin-top: 2em;
-    margin-bottom: 1em;
-}
-
-.portfolioBody .container-fluid {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.project1 {
-    padding-bottom: 20px;
-}
-
-.project1 img {
-    padding-top: 12.5px;
-}
-
-.project2 {
-    padding-bottom: 20px;
-}
-
-.project2 img {
-    padding-top: 12.5px;
-}
-
-.project3 {
-    padding-bottom: 100px;
-}
-
-.project3 img {
-    padding-top: 12.5px;
-}
-
-.projects h4 {
-    padding-top: 55px;
-    font-family: 'Bitter', serif;
-}
-
-.projects p {
-    font-family: 'Philosopher', sans-serif;
-}
-
-@media only screen and (max-width: 700px) {
-    .projects {
-        width: 90%;
-        margin: auto;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    .projects img{
-        width: 90%;
-        margin: auto;
-    }
-}
-
-@media only screen and (max-width: 630px) {
-    .projects p br {
-        content: ' ';
-    }
-}
-
-hr {
-    width: 70%;
-    background-color: #f48042;
-}
-
-@media only screen and (max-width: 700px) {
-    .skate-modal-content,
-    sass-modal-content {
-        width: 100%;
-    }
-}
-
-/* Github Button */
-
-.btn6,
-.btn6:link,
-.btn6:visited {
-    padding: 13px 8px;
-    border: 2px solid #f48042;
-    color: #333;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 3px;
-    transition: all .2s ease-in-out;
-    border-radius: 30px;
-}
-
-.btn6:hover,
-.btn6:link:hover,
-.btn6:visited:hover {
-    background: #333;
-    border: 1px solid #333;
-    color: #fefefe;
-    border-radius: 30px;
-}
-
-/*--------Modals ----------*/
-
-/* Style the Image Used to Trigger the Modal */
-
-#skateWebsite,
-#sassWebsite,
-#loginWebsite {
-    border-radius: 3%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#skateWebsite:hover,
-#sassWebsite:hover,
-#loginWebsite {
-    opacity: 0.7;
-}
-
-/* The Modal (background) */
-
-.skatemodal,
-.sassmodal,
-.loginmodal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 25px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Black w/ opacity */
-}
-
-/* Modal Content (Image) */
-
-.skate-modal-content,
-.sass-modal-content,
-.login-modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-
-#skatecaption,
-#sasscaption,
-#logincaption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation - Zoom in the Modal */
-
-.skate-modal-content,
-#skatecaption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-.sass-modal-content,
-#sasscaption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-.login-modal-content,
-#logincaption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
-}
-
-/* The Close Button */
-
-.skateclose,
-.sassclose,
-.loginclose {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.skateclose:hover,
-.skateclose:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.sassclose:hover,
-.sassclose:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.loginclose:hover,
-.loginclose:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-
-/*------------------------Contact----------------------*/
-
-.contactBody {
-    margin: auto 0;
-    background-color: lightslategrey;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    opacity: 1;
-    transition: 1s opacity;
-    overflow-y: scroll;
-}
-
-.contactBody.fade-out {
-    opacity: 0;
-    transition: none;
-}
-
-.contactHeader {
-    display: inline-block;
-    margin: auto;
-    line-height: 1em;
-    font-weight: 400;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    margin-top: 3em;
-}
-
-.contactHeader3 {
-    margin-top: 30px;
-}
-
-@media only screen and (max-width: 320px) {
-    .contactHeader {
-        display: inline-block;
-        margin: auto;
-        line-height: 1em;
-        font-weight: 400;
-        font-size: 1.8em;
-        text-transform: uppercase;
-        letter-spacing: 0.3em;
-        margin-top: 2em;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .contactHeader3 {
-        margin-top: 30px;
-        font-size: 1.1em;
-    }
-}
-
-.row2 {
-    margin: auto;
-}
-
-.icons {
-    margin-bottom: 20px;
-}
-
-.fa-graduation-cap {}
-
-.fa-book {
-    color: blue;
-}
-
-.fa-code {
-    color: orange;
-    padding-bottom: 10px;
-}
-
-
-
-@keyframes fadein {
-    from {
+@media only screen and (max-width: 3000px) {
+    .css-typing {
+        margin-top: 50px;
         opacity: 0;
+        -webkit-animation: fadein 2s;
+        animation: fadein 2s;
+        -webkit-animation-delay: 3s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
     }
-    to {
-        opacity: 1;
-    }
-}
 
-@-webkit-keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+    @media only screen and (max-width: 3000px) {
 
-/* -- Social Icons ---*/
+        .css-typing p {
+            font-family: "Consolas";
+            font-size: 16px;
+            line-height: 50px;
+        }
 
-body {
-    background: #0A122A;
-}
+        /*------------------------Portfolio----------------------*/
+        .portfolioBody {
+            margin: auto 0;
+            background-color: #f7f9fb;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            opacity: 1;
+            transition: 1s opacity;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
 
-/* Let's style the wrapper in such away that, 
+        .portfolioBody.fade-out {
+            opacity: 0;
+            transition: none;
+        }
+
+        .portfolioHeader {
+            display: inline-block;
+            margin: auto;
+            line-height: 1em;
+            font-weight: 400;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+
+        .portfolioBody .container-fluid {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .project1 {
+            padding-bottom: 20px;
+        }
+
+        .project1 img {
+            padding-top: 12.5px;
+        }
+
+        .project2 {
+            padding-bottom: 20px;
+        }
+
+        .project2 img {
+            padding-top: 12.5px;
+        }
+
+        .project3 {
+            padding-bottom: 100px;
+        }
+
+        .project3 img {
+            padding-top: 12.5px;
+        }
+
+        .projects h4 {
+            padding-top: 55px;
+            font-family: 'Bitter', serif;
+        }
+
+        .projects p {
+            font-family: 'Philosopher', sans-serif;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .projects {
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .projects img {
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        @media only screen and (max-width: 630px) {
+            .projects p br {
+                content: ' ';
+            }
+        }
+
+        hr {
+            width: 70%;
+            background-color: #f48042;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .skate-modal-content,
+            sass-modal-content {
+                width: 100%;
+            }
+        }
+
+        /* Github Button */
+        .btn6,
+        .btn6:link,
+        .btn6:visited {
+            padding: 13px 8px;
+            border: 2px solid #f48042;
+            color: #333;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 3px;
+            transition: all .2s ease-in-out;
+            border-radius: 30px;
+        }
+
+        .btn6:hover,
+        .btn6:link:hover,
+        .btn6:visited:hover {
+            background: #333;
+            border: 1px solid #333;
+            color: #fefefe;
+            border-radius: 30px;
+        }
+
+        /*--------Modals ----------*/
+        /* Style the Image Used to Trigger the Modal */
+        #skateWebsite,
+        #sassWebsite,
+        #loginWebsite {
+            border-radius: 3%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #skateWebsite:hover,
+        #sassWebsite:hover,
+        #loginWebsite {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .skatemodal,
+        .sassmodal,
+        .loginmodal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 25px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (Image) */
+        .skate-modal-content,
+        .sass-modal-content,
+        .login-modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image (Image Text) - Same Width as the Image */
+        #skatecaption,
+        #sasscaption,
+        #logincaption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+        .skate-modal-content,
+        #skatecaption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        .sass-modal-content,
+        #sasscaption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        .login-modal-content,
+        #logincaption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .skateclose,
+        .sassclose,
+        .loginclose {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skateclose:hover,
+        .skateclose:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .sassclose:hover,
+        .sassclose:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .loginclose:hover,
+        .loginclose:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        /*------------------------Contact----------------------*/
+        .contactBody {
+            margin: auto 0;
+            background-color: lightslategrey;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            opacity: 1;
+            transition: 1s opacity;
+            overflow-y: scroll;
+        }
+
+        .contactBody.fade-out {
+            opacity: 0;
+            transition: none;
+        }
+
+        .contactHeader {
+            display: inline-block;
+            margin: auto;
+            line-height: 1em;
+            font-weight: 400;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-top: 3em;
+        }
+
+        .contactHeader3 {
+            margin-top: 30px;
+        }
+
+        @media only screen and (max-width: 320px) {
+            .contactHeader {
+                display: inline-block;
+                margin: auto;
+                line-height: 1em;
+                font-weight: 400;
+                font-size: 1.8em;
+                text-transform: uppercase;
+                letter-spacing: 0.3em;
+                margin-top: 2em;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            .contactHeader3 {
+                margin-top: 30px;
+                font-size: 1.1em;
+            }
+        }
+
+        .row2 {
+            margin: auto;
+        }
+
+        .icons {
+            margin-bottom: 20px;
+        }
+
+        .fa-graduation-cap {}
+
+        .fa-book {
+            color: blue;
+        }
+
+        .fa-code {
+            color: orange;
+            padding-bottom: 10px;
+        }
+
+
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* -- Social Icons ---*/
+        body {
+            background: #0A122A;
+        }
+
+        /* Let's style the wrapper in such away that, 
 it should always be at the center of the browser */
+        .footer {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            text-align: center;
+        }
 
-.footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    text-align: center;
-}
+        .wrapper {
+            width: auto;
+            display: inline-block;
+            height: 100%;
+            text-align: center;
+        }
 
-.wrapper {
-    width: auto;
-    display: inline-block;
-    height: 100%;
-    text-align: center;
-}
+        /* Style the Un-order list by setting its list-style to none */
+        .wrapper ul {
+            list-style: none;
+            padding-left: 0px;
+        }
 
-/* Style the Un-order list by setting its list-style to none */
-
-.wrapper ul {
-    list-style: none;
-    padding-left: 0px;
-}
-
-/* Style the list items inside the UL list, by setting its width, height and line-height 
+        /* Style the list items inside the UL list, by setting its width, height and line-height 
   and float them to left and set its border and border-radius.
  */
+        .wrapper ul li {
+            width: 75px;
+            height: 75px;
+            line-height: 75px;
+            margin: 0 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 5px solid #D8E2DC;
+            float: left;
+            transition: all 0.5s ease;
+        }
 
-.wrapper ul li {
-    width: 75px;
-    height: 75px;
-    line-height: 75px;
-    margin: 0 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 50%;
-    border: 5px solid #D8E2DC;
-    float: left;
-    transition: all 0.5s ease;
-}
-
-/* Style the icons by setting its color and margin-top value to 20px 
+        /* Style the icons by setting its color and margin-top value to 20px 
 to align it properly */
+        .wrapper ul li .fa {
+            color: #D8E2DC;
+            margin-top: 20px;
+            transition: all 0.5s ease;
+        }
 
-.wrapper ul li .fa {
-    color: #D8E2DC;
-    margin-top: 20px;
-    transition: all 0.5s ease;
-}
-
-/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+        /* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
   to icons for glowing effect and use transition property for smooth transition effect. */
+        /*linkedin*/
+        .wrapper ul li:hover.linkedin {
+            border: 5px solid #3b5998;
+            box-shadow: 0 0 15px #3b5998;
+            transition: all 0.5s ease;
+        }
 
-/*linkedin*/
+        .wrapper ul li:hover .fa-linkedin {
+            color: #3b5998;
+            text-shadow: 0 0 15px #3b5998;
+            transition: all 0.5s ease;
+        }
 
-.wrapper ul li:hover.linkedin {
-    border: 5px solid #3b5998;
-    box-shadow: 0 0 15px #3b5998;
-    transition: all 0.5s ease;
-}
+        /*github*/
+        .wrapper ul li:hover.github {
+            border: 5px solid #00aced;
+            box-shadow: 0 0 15px #00aced;
+            transition: all 0.5s ease;
+        }
 
-.wrapper ul li:hover .fa-linkedin {
-    color: #3b5998;
-    text-shadow: 0 0 15px #3b5998;
-    transition: all 0.5s ease;
-}
+        .wrapper ul li:hover .fa-github {
+            color: #00aced;
+            text-shadow: 0 0 15px #00aced;
+            transition: all 0.5s ease;
+        }
 
-/*github*/
+        /* outlook */
+        .wrapper ul li:hover.email {
+            border: 5px solid #bc2a8d;
+            box-shadow: 0 0 15px #bc2a8d;
+            transition: all 0.5s ease;
+        }
 
-.wrapper ul li:hover.github {
-    border: 5px solid #00aced;
-    box-shadow: 0 0 15px #00aced;
-    transition: all 0.5s ease;
-}
-
-.wrapper ul li:hover .fa-github {
-    color: #00aced;
-    text-shadow: 0 0 15px #00aced;
-    transition: all 0.5s ease;
-}
-
-/* outlook */
-
-.wrapper ul li:hover.email {
-    border: 5px solid #bc2a8d;
-    box-shadow: 0 0 15px #bc2a8d;
-    transition: all 0.5s ease;
-}
-
-.wrapper ul li:hover .fa-at {
-    color: #bc2a8d;
-    text-shadow: 0 0 15px #bc2a8d;
-    transition: all 0.5s ease;
-}
+        .wrapper ul li:hover .fa-at {
+            color: #bc2a8d;
+            text-shadow: 0 0 15px #bc2a8d;
+            transition: all 0.5s ease;
+        }
 
 
-/* media queries */
+        /* media queries */
+        @media screen and (max-width: 640px) {
+            .wrapper {
+                width: auto;
+                display: inline-block;
+            }
+            .wrapper ul li {
+                margin-top: 2px;
+                margin: 0 2px;
+            }
+        }
 
-@media screen and (max-width: 640px) {
-    .wrapper {
-        width: auto;
-        display: inline-block;
-    }
-    .wrapper ul li {
-        margin-top: 2px;
-        margin: 0 2px;
-    }
-}
 
-
-@media screen and (max-width: 319px) {
-    .wrapper {
-        width: auto;
-        display: inline-block;
-    }
-    .wrapper ul li {
-        margin: 20px;
-    }
-}
+        @media screen and (max-width: 319px) {
+            .wrapper {
+                width: auto;
+                display: inline-block;
+            }
+            .wrapper ul li {
+                margin: 20px;
+            }
+        }
