@@ -1,12 +1,6 @@
-/*---------------------- Menu Overlay -------------------*/
-
 $(document).ready(function () {
-    $('#toggle').click(function () {
-        $(this).toggleClass('active');
-        $('#overlay').toggleClass('open');
-    });
-
-    /*---------------------- Homepage Header ---------------*/
+    
+ /*---------------------- Homepage Header ---------------*/
 
     // Wrap every letter in a span
     $('.ml12').each(function () {

@@ -9,239 +9,112 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    overflow-y: hidden;
+}
+
+.arrowcontainer {
+  position: relative;
+  width: 24px;
+  height: 24px;
 }
 
 
-/*--Menu Overlay--*/
+.chevron {
+  position: relative;
+  width: 24px;
+  height: 8px;
+  opacity: 0;
+/*  transform: scale3d(0.5, 0.5, 0.5);*/
+  animation: move 3s ease-out infinite;
+  margin: auto;
 
-.menu-cont {
-    position: relative;
-    float: left;
-    top: 4%;
-    display: block;
-    cursor: pointer;
-    padding: 4px;
-    cursor: pointer;
-    z-index: 200;
-    margin-top: 20px;
-    margin-left: 10px;
 }
 
-.menu-txt {
-    display: inline-block;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 20px;
-    letter-spacing: 6px;
-    font-weight: 700;
-    font-family: 'Source Sans Pro', sans-serif;
-    text-overflow: ellipsis;
-    background-image: -webkit-linear-gradient(#FA2300, #E1037C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
 }
 
-.overlay {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.9);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0%;
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
     opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity .35s, visibility .35s, height .35s;
-    transition: opacity .35s, visibility .35s, height .35s;
-    overflow: hidden;
-    z-index: 100;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
 }
 
-.overlay.open {
-    opacity: .9;
-    visibility: visible;
-    height: 100%;
+.text {
+  display: block;
+  position: relative;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
 }
 
-.overlay.open li {
-    -webkit-animation: fadeInRight .5s ease forwards;
-    animation: fadeInRight .5s ease forwards;
-    -webkit-animation-delay: .35s;
-    animation-delay: .35s;
-}
-
-.overlay.open li:nth-of-type(2) {
-    -webkit-animation-delay: .4s;
-    animation-delay: .4s;
-}
-
-.overlay.open li:nth-of-type(3) {
-    -webkit-animation-delay: .45s;
-    animation-delay: .45s;
-}
-
-.overlay.open li:nth-of-type(4) {
-    -webkit-animation-delay: .50s;
-    animation-delay: .50s;
-}
-
-.overlay nav {
-    position: relative;
-    height: 70%;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    font-size: 50px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    text-align: center;
-}
-
-.overlay ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    position: relative;
-    height: 100%;
-}
-
-.overlay ul li {
-    display: block;
-    height: 25%;
-    height: calc(100% / 4);
-    min-height: 50px;
-    position: relative;
-    opacity: 0;
-
-}
-
-.overlay ul li a {
-    display: block;
-    position: relative;
-    text-overflow: ellipsis;
-    background-image: -webkit-linear-gradient(white, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-decoration: none;
-    overflow: hidden;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.overlay ul li a:hover:after,
-.overlay ul li a:focus:after,
-.overlay ul li a:active:after {
-    width: 100%;
-}
-
-.overlay ul li a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    height: 3px;
-
-    -webkit-transition: .35s;
-    transition: .35s;
-}
-
-@-webkit-keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        left: 20%;
-    }
-    100% {
-        opacity: 1;
-        left: 0;
-    }
-}
-
-.overlay ul li a:hover {
-    -webkit-transform: scale(1.6);
-    transform: scale(1.6);
-}
-
-.overlay ul li a:hover:before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
-.overlay ul li a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    height: 3px;
-
-    -webkit-transition: .35s;
-    transition: .35s;
-}
-
-.overlay ul li a:before {
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        left: 20%;
-    }
-    100% {
-        opacity: 1;
-        left: 0;
-    }
-}
-
-.container {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-    background-color: darkgray;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
 }
 
 
 /*------------------------Home---------------------*/
 
 .homeBody {
+    height: 100%;
     margin: auto 0;
     background: url(Assets/wales-bridge.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
+}
+.transparent {
+    background: rgba(11, 31, 65, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    z-index: 0;
 }
 
 .ml12 {
@@ -254,6 +127,7 @@ body {
     left: 50%;
     position: absolute;
     white-space: nowrap;
+    z-index: 1;
 }
 
 .ml12 .letter {
@@ -278,6 +152,7 @@ body {
     left: 50%;
     position: absolute;
     white-space: nowrap;
+    z-index: 1;
 }
 
 .ml13 .letter {
@@ -292,16 +167,8 @@ body {
     }
 }
 
-.transparent {
-    background: rgba(11, 31, 65, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    z-index: -1;
-}
+
+
 
 /*------------------------Bio----------------------*/
 
@@ -313,7 +180,6 @@ body {
     text-align: center;
     opacity: 1;
     transition: 1s opacity;
-    overflow-y: scroll;
     overflow-x: hidden;
 }
 
@@ -373,6 +239,7 @@ body {
 
 }
 
+
 @media only screen and (max-width: 600px) {
     .bioHeader {
         font-size: 2.0em;
@@ -385,7 +252,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 690px) {
     .bioHeader2 {
         font-size: 0.7em;
     }
@@ -393,7 +260,7 @@ body {
 
 @media only screen and (max-width: 400px) {
     .bioHeader2 {
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 }
 
@@ -424,7 +291,7 @@ body {
 .bioRow {
     margin: auto;
     padding: 10px;
-    height: 40px;
+/*    height: 40px;*/
 }
 
 .css-typing {
@@ -452,10 +319,49 @@ body {
 
         .css-typing p {
             font-family: "Consolas";
-            font-size: 16px;
+            font-size: 15px;
             line-height: 50px;
+            width: 90%;
+            margin: auto;
         }
 
+        .row2 {
+            margin: auto;
+        }
+
+        .icons {
+            margin-bottom: 20px;
+        }
+
+        .fa-graduation-cap {}
+
+        .fa-book {
+            color: blue;
+        }
+
+        .fa-code {
+            color: orange;
+        }
+
+
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
         /*------------------------Portfolio----------------------*/
         .portfolioBody {
             margin: auto 0;
@@ -465,7 +371,7 @@ body {
             text-align: center;
             opacity: 1;
             transition: 1s opacity;
-            overflow-y: scroll;
+            width: 100%;
             overflow-x: hidden;
         }
 
@@ -592,7 +498,7 @@ body {
 
         #skateWebsite:hover,
         #sassWebsite:hover,
-        #loginWebsite {
+        #loginWebsite:hover {
             opacity: 0.7;
         }
 
@@ -719,6 +625,7 @@ body {
             opacity: 1;
             transition: 1s opacity;
             overflow-y: scroll;
+            overflow-x: hidden;
         }
 
         .contactBody.fade-out {
@@ -751,6 +658,11 @@ body {
             margin-top: 4em;
         }
 
+        .footer p {
+            color: white;
+            float: center;
+        }
+        
         @media only screen and (max-width: 320px) {
             .contactHeader {
                 display: inline-block;
@@ -775,44 +687,6 @@ body {
             }
         }
 
-        .row2 {
-            margin: auto;
-        }
-
-        .icons {
-            margin-bottom: 20px;
-        }
-
-        .fa-graduation-cap {}
-
-        .fa-book {
-            color: blue;
-        }
-
-        .fa-code {
-            color: orange;
-            padding-bottom: 10px;
-        }
-
-
-
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @-webkit-keyframes fadein {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
 
         /* -- Social Icons ---*/
         body {
@@ -822,12 +696,22 @@ body {
         /* Let's style the wrapper in such away that, 
 it should always be at the center of the browser */
         .footer {
-            position: fixed;
+            position: relative;
             right: 0;
             bottom: 0;
             left: 0;
             padding: 1rem;
             text-align: center;
+        }
+        
+        .footer .wrapper {
+         float: right;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .footer .wrapper {
+                float: none;
+            }
         }
 
         .wrapper {
@@ -937,7 +821,7 @@ to align it properly */
             .footer {
                 position: absolute;
                 display: block;
-                float: right;
+                float: center;
                 padding: 1rem;
                 text-align: center;
             }
