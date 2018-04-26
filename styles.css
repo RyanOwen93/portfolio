@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import url('https://fonts.googleapis.com/css?family=Bitter|Philosopher');
+@import url('https://fonts.googleapis.com/css?family=Tajawal');
 
 html,
 body {
@@ -11,88 +12,95 @@ body {
     left: 0;
 }
 
-.arrowcontainer {
-  position: relative;
-  width: 24px;
-  height: 24px;
+.arrowontainer {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin-top: 5em;
 }
 
 
 .chevron {
-  position: relative;
-  width: 24px;
-  height: 8px;
-  opacity: 0;
-/*  transform: scale3d(0.5, 0.5, 0.5);*/
-  animation: move 3s ease-out infinite;
-  margin: auto;
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+    top: 85%;
+    left: 50%;
+    margin-left: -9px;
 
 }
 
 .chevron:first-child {
-  animation: move 3s ease-out 1s infinite;
+    animation: move 3s ease-out 1s infinite;
 }
 
 .chevron:nth-child(2) {
-  animation: move 3s ease-out 2s infinite;
+    animation: move 3s ease-out 2s infinite;
 }
 
 .chevron:before,
 .chevron:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  background: #fff;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: #fff;
 }
 
 .chevron:before {
-  left: 0;
-  transform: skew(0deg, 30deg);
+    left: 0;
+    transform: skew(0deg, 30deg);
 }
 
 .chevron:after {
-  right: 0;
-  width: 50%;
-  transform: skew(0deg, -30deg);
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
 }
 
 @keyframes move {
-  25% {
-    opacity: 1;
+    25% {
+        opacity: 1;
 
-  }
-  33% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-  }
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
 }
 
 .text {
-  display: block;
-  position: relative;
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  font-size: 12px;
-  color: #fff;
-  text-transform: uppercase;
-  white-space: nowrap;
-  opacity: .25;
-  animation: pulse 2s linear alternate infinite;
+    display: block;
+    position: absolute;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+    transform: translate(-50%, -50%);
+    top: 85%;
+    left: 50%;
 }
 
 @keyframes pulse {
-  to {
-    opacity: 1;
-  }
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -106,6 +114,7 @@ body {
     background-position: center;
     text-align: center;
 }
+
 .transparent {
     background: rgba(11, 31, 65, 0.5);
     position: absolute;
@@ -291,7 +300,7 @@ body {
 .bioRow {
     margin: auto;
     padding: 10px;
-/*    height: 40px;*/
+    /*    height: 40px;*/
 }
 
 .css-typing {
@@ -661,8 +670,9 @@ body {
         .footer p {
             color: white;
             float: center;
+            font-family: 'Tajawal', sans-serif;
         }
-        
+
         @media only screen and (max-width: 320px) {
             .contactHeader {
                 display: inline-block;
@@ -703,11 +713,11 @@ it should always be at the center of the browser */
             padding: 1rem;
             text-align: center;
         }
-        
+
         .footer .wrapper {
-         float: right;
+            float: right;
         }
-        
+
         @media only screen and (max-width: 768px) {
             .footer .wrapper {
                 float: none;
