@@ -1,5 +1,6 @@
 $(document).ready(function () {
     
+    
  /*---------------------- Homepage Header ---------------*/
 
     // Wrap every letter in a span
@@ -154,4 +155,5 @@ $(document).ready(function(){
     } 
   });
 });
+
 
