@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import url('https://fonts.googleapis.com/css?family=Bitter|Philosopher');
 @import url('https://fonts.googleapis.com/css?family=Tajawal');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 html,
 body {
@@ -327,7 +328,7 @@ body {
     @media only screen and (max-width: 3000px) {
 
         .css-typing p {
-            font-family: "Consolas";
+            font-family: 'Montserrat', sans-serif;;
             font-size: 15px;
             line-height: 50px;
             width: 90%;
@@ -374,7 +375,7 @@ body {
         /*------------------------Portfolio----------------------*/
         .portfolioBody {
             margin: auto 0;
-            background-color: #f7f4e8;
+            background-color: #F5F5F5;
             background-size: cover;
             background-position: center;
             text-align: center;
