@@ -673,6 +673,12 @@ body {
             float: center;
             font-family: 'Tajawal', sans-serif;
         }
+        
+        .createdBy {
+            margin-top: 50px;
+            color: #f48042;
+            opacity: 0.6;
+        }
 
         @media only screen and (max-width: 320px) {
             .contactHeader {
